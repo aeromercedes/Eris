@@ -28,7 +28,7 @@ module.exports = {
         //.setDescription(comms)
         .addField("**Administrative Commands**", "`kick, ban, members, purge, serverinfo, userinfo`")
         .addField("**Fun Commands**", "`cat, dog, solar, 8ball, howsimp, weather`")
-        .addField("**Miscellaneous Commands**", "`stats, help, prefix, covid, vote`")
+        .addField("**Miscellaneous Commands**", "`stats, help, prefix, covid`")
         .addField("**Music Commands**", "`badapple, radio, disconnect`")
         .addField("**Staff Commands**", "`shift, interview, training`")
         .addField("**Administrator Only**", "`reload, status, systemdm`")
