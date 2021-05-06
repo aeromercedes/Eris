@@ -1,0 +1,15 @@
+{
+    "Config": {
+        "prefix": "*",
+        "apiKeys": {
+            "youtube": "AIzaSyC3gd9SxOFfSpZghDqscEoLhsWUsGuy-zs"
+        },
+        "administrators": ["727887715869261864", "521152093181181953", "740296057908494486"],
+        "logging": {
+            "channel_id": null,
+            "enabled": false
+        },
+        "session_channel": "839899042384576573",
+        "session_ping": "839907533976240198"
+    }
+}
