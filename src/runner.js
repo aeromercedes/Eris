@@ -78,3 +78,15 @@ client.on('message', async message => {
         }
     }
 });
+
+client.on('guildMemberAdd', member => {
+    const embed = new Discord.MessageEmbed()
+    .setTitle(":wave: | Welcome to Golosita!")
+    .setFooter("Enjoy your time at Golosita!")
+    .setDescription(`Hey, ${member}! Welcome to Golosita Discord Server. Consider:\n:orange_book: **Reading rules in <#835794904332107776>,**\n:map:**Joining our group in <#835794788841422860> if you already haven't**`)
+    .setThumbnail(member.user.avatarURL({ dynamic: true, size: 4096}))
+    .setColor("#ffbf00")
+
+    const channel = client.channels.cache.get("835797846476980255")
+    channel.send(member, embed)
+})
