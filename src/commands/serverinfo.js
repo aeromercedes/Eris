@@ -52,7 +52,6 @@ module.exports = {
                 { name: 'Guild Name', value: message.guild.name, inline: true },
                 { name: 'Guild ID', value: message.guild.id, inline: true},
                 { name: 'Guild Owner', value: message.guild.owner, inline: true },
-                { name: 'Guild Owner ID', value: message.guild.owner.id, inline: true },
                 { name: 'Guild Creation Date', value: message.guild.createdAt, inline: true },
                 { name: 'Region', value: regions[message.guild.region], inline: true },
                 { name: 'Verification Level', value: verifictionLevels[message.guild.verificationLevel], inline: true },
