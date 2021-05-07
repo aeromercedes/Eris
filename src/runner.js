@@ -9,7 +9,7 @@ const reverseString = require('./functions/reverseString')
 const log = require('./functions/log')
 const Configuration = require('./configuration/config.json').Config
 
-const client = new Discord.Client()
+const client = new Discord.Client({ ws: Discord.Intents.ALL })
 const cooldowns = new Discord.Collection()
 client.commands = new Discord.Collection()
 
