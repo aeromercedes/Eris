@@ -27,7 +27,7 @@ module.exports = {
 
                 const connection = await message.member.voice.channel.join()
                 connection.play(broadcast)           
-                broadcast.play(await ytdl("https://www.youtube.com/watch?v=lDW6RVU60PA"))
+                broadcast.play(await ytdl("https://www.youtube.com/watch?v=636AKV77yAI"))
                 log("info", "Loading Metro FM")
                 
                 const embed = new Discord.MessageEmbed()
