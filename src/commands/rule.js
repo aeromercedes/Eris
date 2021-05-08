@@ -4,7 +4,7 @@ module.exports = {
     name: 'rule',
 
     execute(message, args) {
-        const rule1 = ":one: Innapropriate topics/phrases are not permitted to be used in the server, unless you have been given consent by Golosita Administration, we do not recommend using any as it will result in a punishment.** "
+        const rule1 = ":one: **Innapropriate topics/phrases are not permitted to be used in the server, unless you have been given consent by Golosita Administration, we do not recommend using any as it will result in a punishment.** "
         const rule2 = ":two: **Profanity is allowed, but do not use it excessively and do not use heavy swearing phrases. This will result in a punishment.**"
         const rule3 = ":three: **Spamming is not allowed, any sort of excessive spam will result in a punishment.**"
         const rule4 = ":four: **Any form of harassment or cyberbullying is strictly prohibited in our text channels and voice channels. The Golosita Administration will strictly enforce this rule and shall take any necessary actions of both parties involved in harassment/cyber-bullying cases. This does include any conflict between both parties.**"
