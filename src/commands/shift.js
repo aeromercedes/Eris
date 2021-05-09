@@ -5,7 +5,7 @@ module.exports = {
     name: 'shift',
 
     execute(message, args, client) {
-        if(message.member.roles.cache.find(r => r.id == "835802322813845546" || r.id == "835802099513294850")) {
+        if(message.member.roles.cache.find(r => r.id == "840700361693986836" || r.id == "840700329557491712")) {
             const channel = client.channels.cache.get(require('../configuration/config.json').Config.session_channel)
 
             const embed = new Discord.MessageEmbed()
