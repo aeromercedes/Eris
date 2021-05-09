@@ -87,6 +87,6 @@ client.on('guildMemberAdd', member => {
     .setThumbnail(member.user.avatarURL({ dynamic: true, size: 4096}))
     .setColor("#ffbf00")
 
-    const channel = client.channels.cache.get("835797846476980255")
+    const channel = client.channels.cache.get("840696939217420298")
     channel.send(member, embed)
 })
