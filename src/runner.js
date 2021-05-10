@@ -83,7 +83,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
     .setTitle(":wave: | Welcome to Golosita!")
     .setFooter("Enjoy your time at Golosita!")
-    .setDescription(`Hey, ${member}! Welcome to Golosita Discord Server. Consider:\n:orange_book: **Reading rules and joining our group in <#840696023050616862>**\n:white_sun_rain_cloud: **Got a suggestion about Golosita? Share it in <#840697029256413195>\n:question: **Don't know where to get notified for interviews or trainings? Head to <#840696470184263690>!**`)
+    .setDescription(`Hey, ${member}! Welcome to Golosita Discord Server. Consider:\n:orange_book: **Reading rules and joining our group in <#840696023050616862>**\n:white_sun_rain_cloud: **Got a suggestion about Golosita? Share it in** <#840697029256413195>\n:question: **Don't know where to get notified for interviews or trainings? Head to <#840696470184263690>!**`)
     .setThumbnail(member.user.avatarURL({ dynamic: true, size: 4096}))
     .setColor("#ffbf00")
 
