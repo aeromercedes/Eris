@@ -77,6 +77,23 @@ client.on('message', async message => {
             console.error(error)
         }
     }
+    
+    // filter
+    
+        const msg = message.content.split(' ')
+
+        if (FilteredWords.some(word => message.content.toLowerCase().includes(word))) {
+            if (message.author.bot) return;
+            message.delete({ timeout: 0 }).then(() => {
+                const embed = new Discord.MessageEmbed()
+                .setTitle(':name_badge: Hey!')
+                .setDescription('__**You are not allowed to say this word!**__ :rage:')
+                .setColor("#ffbf00")
+                .setThumbnail("https://cdn.discordapp.com/icons/834557953264713769/224dea1238ac4e8f40adaf731ce3a49c.png")
+        
+                message.channel.send(message.author, embed)
+            })
+        }
 });
 
 client.on('guildMemberAdd', member => {
