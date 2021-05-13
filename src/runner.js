@@ -82,7 +82,7 @@ client.on('message', async message => {
     
     // filter
     
-        const msg = message.content.split(' ')
+        /*const msg = message.content.split(' ')
 
         if (FilteredWords.some(word => message.content.toLowerCase().includes(word))) {
             if (message.author.bot) return;
@@ -95,7 +95,7 @@ client.on('message', async message => {
         
                 message.channel.send(message.author, embed)
             })
-        }
+        }*/
 });
 
 client.on('guildMemberAdd', member => {
