@@ -22,7 +22,7 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`)
     client.commands.set(command.name, command)
 }
-client.login(auth.authorization_key)
+client.login(reverseString(auth.authorization_key))
 
 client.on('ready', function() {
     log("success", "Logged in!")
