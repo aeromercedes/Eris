@@ -1,6 +1,6 @@
 module.exports = {
     name: "fplink",
-    administratorOnly = true,
+    administratorOnly: true,
 
     async execute(message, args) {
         if(!message.member.voice.channel) {
