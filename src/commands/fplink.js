@@ -1,3 +1,7 @@
+const Discord = require('discord.js')
+const log = require('../functions/log')
+const ytdl = require('ytdl-core')
+
 module.exports = {
     name: "fplink",
     administratorOnly: true,
