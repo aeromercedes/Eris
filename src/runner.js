@@ -67,6 +67,7 @@ client.on('message', async message => {
 
         try {
             command.execute(message, args, client);
+            log("info", `${message.author.tag} has executed the command ${command.name}`)
         } catch (error) {
             let errId = "AERO_ERR:" + cpt.randomBytes(12).toString('hex');
 
