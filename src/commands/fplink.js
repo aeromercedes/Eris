@@ -6,7 +6,7 @@ module.exports = {
     name: "fplink",
     administratorOnly: true,
 
-    async execute(message, args) {
+    async execute(message, args, client) {
         if(!message.member.voice.channel) {
             const novc = new Discord.MessageEmbed()
             .setDescription('__**Error**__\nYou are not in a voice channel!')
