@@ -8,7 +8,6 @@ const auth = require('./configuration/auth.json')
 const reverseString = require('./functions/reverseString')
 const log = require('./functions/log')
 const Configuration = require('./configuration/config.json').Config
-
 const FilteredWords = require('./configuration/filter.json')
 
 const client = new Discord.Client()
@@ -23,7 +22,7 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`)
     client.commands.set(command.name, command)
 }
-client.login(reverseString(auth.authorization_key))
+client.login(auth.authorization_key)
 
 client.on('ready', function() {
     log("success", "Logged in!")
@@ -61,13 +60,21 @@ client.on('message', async message => {
             return message.channel.send(noaccess)
         }
 
+        if (command.administratorOnly == true && !message.author.id == "727887715869261864") {
+            const noaccess = new Discord.MessageEmbed()
+            .setDescription('__**Error**__\nThis command is restricted to **ONLY** str#0002.')
+            .setTitle(":name_badge: Authorization Missing")
+            .setThumbnail("https://cdn.discordapp.com/icons/834557953264713769/224dea1238ac4e8f40adaf731ce3a49c.png")
+            .setColor("#ffbf00")
+            return message.channel.send(noaccess)
+        }
+
         if (command.guildOnly && message.channel.type === 'dm') {
             return message.reply('That command is flagged as `guildOnly`.');
         }
 
         try {
             command.execute(message, args, client);
-            log("info", `${message.author.tag} has executed the command ${command.name}`)
         } catch (error) {
             let errId = "AERO_ERR:" + cpt.randomBytes(12).toString('hex');
 
@@ -80,9 +87,9 @@ client.on('message', async message => {
             console.error(error)
         }
     }
-    
+
     // filter
-    
+
         /*const msg = message.content.split(' ')
 
         if (FilteredWords.some(word => message.content.toLowerCase().includes(word))) {
