@@ -34,7 +34,7 @@ module.exports = {
                         .setThumbnail("https://cdn.discordapp.com/icons/834557953264713769/224dea1238ac4e8f40adaf731ce3a49c.png")
                         .setColor("#ffbf00")
                         return message.channel.send(reply)    
-                    } else if (message.member.hasPermission("MANAGE_MESSAGES") or message.author.id == "727887715869261864") {
+                    } else if (message.member.hasPermission("MANAGE_MESSAGES")) {
                         message.channel.bulkDelete(args[0])
                     }
                 }
